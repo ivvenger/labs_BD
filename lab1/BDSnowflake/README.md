@@ -30,6 +30,13 @@
 
 ```mermaid
 erDiagram
+    dim_customer ||--o{ fact_sales : ""
+    dim_seller ||--o{ fact_sales : ""
+    dim_product ||--o{ fact_sales : ""
+    dim_store ||--o{ fact_sales : ""
+    dim_supplier ||--o{ fact_sales : ""
+    dim_date ||--o{ fact_sales : ""
+
     dim_customer {
         int customer_key PK
         string customer_id UK
