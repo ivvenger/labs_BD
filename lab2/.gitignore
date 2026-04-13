@@ -1,0 +1,11 @@
+*.jar
+*.jar.1
+clickhouse_config/
+data/
+*.backup
+Dockerfile.backup
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+BigDataSpark/исходные\ данные/
