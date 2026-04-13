@@ -8,4 +8,4 @@ Dockerfile.backup
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-BigDataSpark/исходные\ данные/
+#BigDataSpark/исходные\ данные/
