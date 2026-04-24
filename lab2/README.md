@@ -54,6 +54,83 @@
 
 ---
 
+## 5. Схема базы данных
+
+```mermaid
+erDiagram
+    dim_customer ||--o{ fact_sales : ""
+    dim_seller ||--o{ fact_sales : ""
+    dim_product ||--o{ fact_sales : ""
+    dim_store ||--o{ fact_sales : ""
+    dim_supplier ||--o{ fact_sales : ""
+    dim_date ||--o{ fact_sales : ""
+
+    dim_customer {
+        int customer_key PK
+        int customer_id UK
+        string first_name
+        string last_name
+        int age
+        string email
+        string country
+    }
+
+    dim_seller {
+        int seller_key PK
+        int seller_id UK
+        string first_name
+        string last_name
+        string email
+        string country
+    }
+
+    dim_product {
+        int product_key PK
+        int product_id UK
+        string name
+        string category
+        decimal price
+        string brand
+        decimal rating
+        int reviews
+    }
+
+    dim_store {
+        int store_key PK
+        string store_name UK
+        string city
+        string country
+    }
+
+    dim_supplier {
+        int supplier_key PK
+        string supplier_name UK
+        string country
+    }
+
+    dim_date {
+        int date_key PK
+        date full_date UK
+        int year
+        int month
+        string month_name
+    }
+
+    fact_sales {
+        int sales_key PK
+        int customer_key FK
+        int seller_key FK
+        int product_key FK
+        int store_key FK
+        int supplier_key FK
+        int date_key FK
+        int quantity
+        decimal total_price
+    }
+```
+
+---
+
 ## 5. Инструкция по запуску
 
 **Запуск контейнеров:**
